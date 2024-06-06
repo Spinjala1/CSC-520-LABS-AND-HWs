@@ -1,5 +1,7 @@
 '''
-Affirm the honor code as an individual or as a group.
+We, <names>, have neither given or recived inappropriate
+help with this lab assignment. All group members participated in this work, and all
+concur with this submission.
 '''
 
 
