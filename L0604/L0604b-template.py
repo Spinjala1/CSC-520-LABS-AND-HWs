@@ -4,26 +4,27 @@ Affirm the honor code as an individual or as a group.
 
 
 def L0604b(inString):
-    # inString is a white-space delimited list of string representations
-    # of decimal ints. For example, ' 7 6 5 -2   4' is a valid inString.
-
-    # If inString contains a white-space delimited substring of symbols that
-    # is not a valid decimal int, L0604b(inString) == 'no'. For example,
-    # L0604b(' 7 -6 5 -2 x0F  8)' == 'no', because 'x0F' is not a valid
-    # decimal int.
-
-    # Otherwise, if inString does not contain any representations of positive
-    # ints, return 'no'
+    # Split the input string into individual elements
+    elements = inString.split()
     
-    # Otherwise, L0604b(inString) returns the sum of all positive ints mod 2.
-    # For example,L0604b('7 6 5 -2 5') would return 1, because
-    # 7+6+5+9 = 27, 27 % 2 == 1. (Note that % is the Python mod operator.
-    #
+    # Initialize variables to keep track of positive integers and the sum
+    positive_int_sum = 0
+    has_positive_int = False
 
-    # Add the needed code.
-    #
-    
-    return '0' # returning a constant value will not work. 
+    # Iterate through each element in the input string
+    for element in elements:
+        try:
+            num = int(element)
+            if num > 0:
+                positive_int_sum += num
+                has_positive_int = True
+        except ValueError:
+            return 'no'  # If any element is not a valid integer, return 'no'
+
+    if not has_positive_int:
+        return 'no'  # If no positive integers are found, return 'no'
+
+    return str(positive_int_sum % 2)  # Return the sum of positive integers modulo 2 
 
 if __name__ == '__main__':
 
