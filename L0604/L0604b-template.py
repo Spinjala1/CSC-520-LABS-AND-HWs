@@ -43,7 +43,7 @@ if __name__ == '__main__':
     num = 1
     s = '10 5 9 -2'
     exp = '10+5+9 = 24, 24 % 2 = 0' 
-    num = test_case(F,1,'0',num,exp)
+    num = test_case(F,s,'0',num,exp)
     
     s = ' -2'
     exp = 'No positive ints'
