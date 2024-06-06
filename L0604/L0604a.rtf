@@ -1,0 +1,38 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fmodern\fcharset0 CourierNewPSMT;\f2\fnil\fcharset0 AppleSymbols;
+\f3\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;\red66\green68\blue72;}
+{\*\expandedcolortbl;;\cssrgb\c32549\c33725\c35294;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\fs32 \cf2 \expnd0\expndtw0\kerning0
+a. A computer can test one million passwords per second, where each password is an 8-symbol string over \uc0\u8721  = \{
+\f1 C,c, A, a, G, g, T, t
+\f0 \}. In your opinion, could the problem of finding a password by brute force search be solved efficiently?\
+The password is an 8 symbol string so that means there are 8^8 possible combinations for the password. 8^8 is 16,777,216 possible passwords. Now with the scenario, a password can be tested one million passwords per second. 16,777,216/1,000,000 equals 16 seconds. Finding the password with brute force can be efficient because the whole password space can be searched in a short amount of time thanks to the small size of the password and high rate of password testing. \
+\
+b. Suppose that the password length was expanded to 12. Now could the problem of finding a password by brute force search be solved efficiently?\
+We now have password length of 12 with the same 8 possible characters. We get 8^12 which is 68,719,476,736 combinations. To calculate time to test all passwords we do, 68,719,476,736/1,000,000 which is 68,719.48 seconds. We can convert this time from seconds to hours like 68.719.48/3600 which equals around 19 hours. We can see that increasing password length can impact the difficulty of using brute force. This is not as efficient as the last problem because of the sheer amount of time it takes, which is 19 hours.  \
+\
+c. With the password length at 12, suppose that \uc0\u8721  was expanded to include these 4 symbols: 
+\f1 ! , \'a0: -
+\f0 . Now could the problem of finding a password by brute force search be solved efficiently?\
+With four more symbols we get a total of 12 characters now. Password is now 12 characters long with 12 password combinations so we get 12^12. This is 8,916,100,448,256. The time it takes to test all passwords in seconds is 8,916,100,448,256/1,000,000 equals 8,916,100.45 seconds. The time to days is 8,916,100.45/86,400 equals around 103 days. Brute forcing this as you can see is not efficient. 103 days is a long time, this approach would be totally impractical and inefficient in a scenario where speed is key. \
+\
+d. Suppose you were asked to write a program that evaluates syntax checkers for 8-symbol passwords over \uc0\u8721  = \'a0 \{C,c, A, a, G, g, T, t\}. That is, the input to your program Evaluator would be the source code of a syntax checker, and\u8232 \'a0 \'a0 Evaluator(SynChk) returns 
+\f1 'yes'
+\f0 \'a0 if 
+\f2 \uc0\u8704 
+\f3 \uc0\u7529 
+\f0 (SynChk(\uc0\u966 ) ==
+\f1  'valid'
+\f0  if |\uc0\u966 | = 8 and\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0every symbol in \u966  is in \u8721  \'a0\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0AND\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0SynChk(\u966 ) == 
+\f1 'invalid'
+\f0  if |\uc0\u966 | \u8800  8 or\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0there is a symbol in \u966  that is not in \u8721 )\u8232 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\'a0\u8232 \'a0 \'a0 otherwise Evaluator(SynChk) returns 
+\f1 'no' \'a0
+\f0  \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0\
+Note that SynChk plays a double role in this definition, as a string parameter to Evaluator(), and as source code whose possible output is evaluated.\
+Could evaluator decide whether a syntax checker is up to the job? If so, could be it solve the problem efficiently? Bear in mind what all programmers learn: an arbitrary program can incur an exception, or go into an infinite loop.\
+It can be possible to make Evaluator and test SynChk against a finite but manageable number of test cases. When conceding combinations that are efficient, then there are only 8^8 valid combinations. Efficiency goes down a lot when SynChk has inefficient or problematic functions like infinite loops or any exceptions that are not handled. Timeouts and exception handling can help in dealing with these issues in Evaluator. Evaluator could decide if a syntax checker is able to work with SynChk against some tests. The efficiency of Evaluator are dependent on strong structures to handle infinite loops or any other mechanisms in SynChk. To get maximum efficiency in Evaluator you need to make strategies to manage execution of SynChk. }
