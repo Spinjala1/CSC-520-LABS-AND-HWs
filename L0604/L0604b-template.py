@@ -55,10 +55,10 @@ if __name__ == '__main__':
 
     s = '  7 -5 16 2 '
     exp = '7+16+2 = 25, 25 % 2 = 1'
-    num = test_case(F,s,'1',num,exp)    
+    num = test_case(F,s,'1',num,exp)
 
-    s = 'x1 6 1 10 1 1 -2'
-    exp = "x1 does not represent a decimal int"
-    num = test_case(F,s,'no',num,exp)
+    s = 'x7 -5 16 2'
+    exp = "x7 does not represent a decimal int"
+    num = test_case(F, s, 'no', num, exp)
 
     
