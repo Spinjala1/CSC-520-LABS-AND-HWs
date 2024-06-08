@@ -58,6 +58,6 @@ if __name__ == '__main__':
 
     s = 'x1 6 1 10 1 1 -2'
     exp = "x1 does not represent a decimal int"
-    num = test_case(F,s,'14',num,exp)
+    num = test_case(F,s,'no',num,exp)
 
     
