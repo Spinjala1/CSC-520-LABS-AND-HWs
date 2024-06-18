@@ -8,10 +8,6 @@ import computesLen # Oracle function
 
 def alterYesToLen(inString):
     ## ** H1 Add code needed before the call to universal ** 
-    originalOutput = universal('{progString}', inString)
-    if originalOutput == 'yes':
-        return str(len(inString))
-    return originalOutput
 
    val = universal(progString,newInString)
 
