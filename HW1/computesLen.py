@@ -8,7 +8,6 @@ import computesLen # Oracle function
 
 def alterYesToLen(inString):
     ## ** H1 Add code needed before the call to universal ** 
-
    val = universal(progString,newInString)
 
     ## ** H1 Add code needed after the call to universal ** 
@@ -18,7 +17,7 @@ def yesViaLen(progString,inString):
     ## ** H1 - Add code needed before the call to computesLen
 
     # Add 2nd parameter if needed
-    result = computesLen(rf('alterYesToLen.py'), … )
+     result = computesLen(rf('alterYesToLen.py'), ...)
 
     ## ** H1 - Add code needed after the call to computesLen
 
