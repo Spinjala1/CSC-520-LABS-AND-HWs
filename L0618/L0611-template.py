@@ -1,3 +1,10 @@
+'''
+On our honor, as SFSU students, we, Sripranav Pinjala, Annison Van, John King, and Subhan Khan,
+did not give or receive inappropriate help with this assignment. All group members contributed
+to this work, and all concur with the submission. We understand that we will be asked to redo
+the assignment in person if this work presents any question of an honor code violation.
+'''
+
 import utils
 from utils import rf
 import universal
@@ -35,3 +42,15 @@ def yesViaOddEven(progString, inString):
         return 'yes'
     else:
         return 'no'
+
+'''
+This program demonstrates the undecidability of the OddEven problem. OddEven problem shows
+if the given program produces outputs of the correct length parity (odd or even) based on
+input length parity. The function alterYesToOddEven determines whether a given program such
+as progString stops on a specific input which is newInString and returns a string based on
+the condition. YesViaOddEven function is used to determine if OddEven condition holds for 
+the given progString and inString values. This program uses undecidability of the Halting
+Problem to prove that the OddEven problem is undecidable as well. This shows no algorithm
+is really able to decide OddEven problem, showing its undecidability. 
+
+'''
