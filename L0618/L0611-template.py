@@ -1,29 +1,37 @@
+import utils
 from utils import rf
 import universal
-import oddEven # Oracle function
+import oddEven  # Oracle function
 
-def alterYesToOddEven(progString):
+def alterYesToOddEven(inString):
     ## ** L0611 Add code needed before the call to universal **
-    modifiedProgString = "definition P(I): return " + progString
-    newInput = "I"
+    progString, newInString = utils.DESS(inString)
+    halts = universal(progString, newInString)
+
     ## ** L0611 Add code needed after the call to universal **
-    result = universal(modifiedProgString, newInput)
-    if result:
-        return "yes"
+    if halts:
+        # Return a string with odd length.
+        return "a"
     else:
-        return "no"
+        # Return a string with even length.
+        return "ab"
 
 def yesViaOddEven(progString, inString):
     ## ** L0611 - Add code needed before the call to computesLen
-    oddEvenResult = oddEven(rf('alterYesToOddEven.py'), progString)
+    # Add a second parameter only if needed.
+    result = oddEven(rf('alterYesToOddEven.py'), inString)
+
     ## ** L0611 - Add code needed after the call to computesLen
-    if oddEvenResult == "yes":
-        return True
+    # Check expected parity of the output length
+    if len(inString) % 2 == 0:
+        # Expecting odd length for output.
+        expected_parity = 1
     else:
-        return False
+        # Expecting even length for output.
+        expected_parity = 0
 
-
-'''
-** L0611 - Explain why your code shows that OddEven is undecidable.
-
-'''
+    # Check if the length of the result equals expected parity.
+    if len(result) % 2 == expected_parity:
+        return 'yes'
+    else:
+        return 'no'
