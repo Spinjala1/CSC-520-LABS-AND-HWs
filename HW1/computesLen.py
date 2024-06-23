@@ -22,14 +22,12 @@ def yesViaLen(progString, inString):
 
 '''
 ** H1 - Explain why your code shows that computesLen is undecidable.
-The provided solution demonstrates that `ComputesLen` is undecidable by transforming the 
-problem into one that requires solving the Halting Problem. In `alterYesToLen`, we create 
-a modified program string that incorporates the original program and checks if it computes 
-the length of a given input. By executing the original program within this modified context 
-and testing if the output matches the expected length, we simulate the behavior needed to 
-determine if the original program computes the length of its input. `yesViaLen` then uses 
-the `ComputesLen` oracle to check if this modified program correctly computes the length 
-of its input. This reduction shows that if `ComputesLen` were decidable, we could decide 
-the Halting Problem, which is known to be undecidable. Hence, `ComputesLen` must also be 
-undecidable.
+The provided solution demonstrates that `ComputesLen` is undecidable by simulating a scenario 
+similar to solving the Halting Problem. In `alterYesToLen`, we simulate a change in function behavior 
+using a global variable. This change makes the function behave as if it returns the length of its input 
+as a string. `yesViaLen` then determines if this simulated behavior change enables the function to compute 
+the length correctly. This approach reflects the challenge of determining function behavior without direct 
+execution, similar to the undecidability of the Halting Problem. Hence, by this theoretical reduction, if 
+we could decide `ComputesLen`, we would be able to solve the Halting Problem, which is known to be undecidable. 
+Therefore, `ComputesLen` must also be undecidable.
 '''
