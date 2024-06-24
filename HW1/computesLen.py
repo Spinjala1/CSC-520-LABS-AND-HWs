@@ -1,3 +1,9 @@
+'''
+On our honor, as SFSU students, we, Sripranav Pinjala, Annison Van, John King, and Subhan Khan,
+did not give or receive inappropriate help with this assignment. All group members contributed
+to this work, and all concur with the submission. We understand that we will be asked to redo
+the assignment in person if this work presents any question of an honor code violation.
+'''
 import universal
 import computesLen  # This is an Oracle function, provided in your environment
 from utils import rf  # Assuming rf reads the function's code from a file
